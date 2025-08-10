@@ -1,6 +1,5 @@
 "use client"
 
-import { videoSchema } from "@/app/(protected)/publish/page"
 import { account, appwriteConfig, database, storage } from "@/appwrite/config"
 import { ID, Query } from "appwrite"
 import z from "zod"
@@ -10,13 +9,7 @@ interface Icomment {
     videoId: string
 }
 
-
-interface IVideo extends z.infer<typeof videoSchema> {
-    likes?: [],
-    comments?: [],
-    bookmarks?: []
-}
-const publishVideo = async (data: IVideo, onProgress: (progress: number) => void) => {
+const publishVideo = async (data: any, onProgress: (progress: number) => void) => {
     try {
         const isExist = await database.listDocuments(
             appwriteConfig.appwwriteDatabaseId,

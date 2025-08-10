@@ -27,7 +27,7 @@ import { Progress } from "@/components/ui/progress"
 const videoTypes = ["video/mp4", "video/webm", "video/ogg"]
 const thumbnailTypes = ["image/jpeg", "image/png", "image/webp"]
 
-export const videoSchema = z.object({
+const videoSchema = z.object({
   title: z.string().min(2, "Title must be at least 2 characters long").max(256),
   description: z.string().max(1024).optional(),
   video: z
