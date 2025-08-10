@@ -2,7 +2,7 @@
 
 import { videoSchema } from "@/app/(protected)/publish/page"
 import { account, appwriteConfig, database, storage } from "@/appwrite/config"
-import { ID, Models, Query, UploadProgress } from "appwrite"
+import { ID, Query } from "appwrite"
 import z from "zod"
 
 interface Icomment {
@@ -10,10 +10,7 @@ interface Icomment {
     videoId: string
 }
 
-interface Ilike {
-    reaction: string,
-    videoId: string,
-}
+
 interface IVideo extends z.infer<typeof videoSchema> {
     likes?: [],
     comments?: [],
@@ -72,7 +69,7 @@ const publishVideo = async (data: IVideo, onProgress: (progress: number) => void
             }
         )
         return videoDoc
-    } catch (error: any) {
+    } catch (error) {
         console.log(error)
         throw error
     }

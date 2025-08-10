@@ -29,7 +29,7 @@ const createUser = async (user: Iuser): Promise<Models.Document> => {
         )
         return profile
 
-    } catch (error: any) {
+    } catch (error) {
         console.log(error)
         throw error
     }
@@ -41,7 +41,7 @@ const loginUser = async (user: Iuser): Promise<Models.Document> => {
         if (!session) throw Error
         const profile = await getCurrentUser()
         return profile
-    } catch (error: any) {
+    } catch (error) {
         console.log(error)
         throw error
     }
@@ -57,7 +57,7 @@ const getCurrentUser = async (): Promise<Models.Document> => {
             userAccount.$id
         )
         return profile
-    } catch (error: any) {
+    } catch (error) {
         console.log(error)
         throw error
     }
@@ -138,7 +138,7 @@ const updateProfile = async (data: object) => {
     }
 }
 
-const getProfiles = async (query: string, id = "") => {
+const getProfiles = async (query: string) => {
     try {
         const profiles = await database.listDocuments(
             appwriteConfig.appwwriteDatabaseId,
