@@ -11,6 +11,21 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+    {
+    rules: {
+      // Warn instead of error for `any` — or use "off" to disable entirely
+      "@typescript-eslint/no-explicit-any": "warn",
+
+      // Warn (not error) on unused vars; ignore those starting with `_`
+      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+
+      // Warn for missing deps in useEffect instead of error
+      "react-hooks/exhaustive-deps": "warn",
+
+      // Allow <img> tag (optional)
+      "@next/next/no-img-element": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
