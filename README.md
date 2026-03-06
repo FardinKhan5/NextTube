@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎥 NextTube – Modern Video Sharing Platform
 
-## Getting Started
+NextTube is a modern **video sharing platform inspired by YouTube**, built with **Next.js, TypeScript, ShadCN UI, and Appwrite**.  
+The platform allows users to upload, browse, and watch videos through a responsive and clean user interface.
 
-First, run the development server:
+This project demonstrates **modern full-stack frontend architecture** using the latest Next.js ecosystem and backend services powered by Appwrite.
+
+---
+
+## 🚀 Live Demo
+
+🔗 https://next-tube-fardin-khan.vercel.app/
+
+---
+
+## ✨ Features
+
+- 🔐 User Authentication (Appwrite Auth)
+- 📤 Video Upload System
+- 🎬 Video Playback
+- 📜 Infinite Scrolling Video Feed
+- 👤 User Profiles
+- 🌙 Dark / Light Theme
+- ⚡ Fast UI with Next.js App Router
+- 📱 Fully Responsive Design
+- 🧩 Modern UI using ShadCN & Radix UI
+
+---
+
+## 🏗️ Tech Stack
+
+### Frontend
+- Next.js (App Router)
+- TypeScript
+- TailwindCSS
+- ShadCN UI
+- Radix UI
+- React Hook Form
+- Zod Validation
+
+### Backend Services
+- Appwrite (Authentication, Database, Storage)
+
+### Deployment
+- Vercel
+
+---
+
+## 📂 Project Structure
+```
+NextTube
+│
+├── app/ # Next.js App Router pages
+├── components/ # Reusable UI components
+├── features/ # Feature based modules
+├── hooks/ # Custom React hooks
+├── lib/ # Utilities and configurations
+├── services/ # Appwrite service functions
+├── types/ # TypeScript types
+└── public/ # Static assets
+```
+---
+
+## ⚙️ Installation
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/fardinkhan5/NextTube.git
+cd NextTube
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+http://localhost:3000
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔑 Environment Variables
+Create a .env.local file in the root directory.
+```
+NEXT_PUBLIC_APPWRITE_ENDPOINT=
+NEXT_PUBLIC_APPWRITE_PROJECT_ID=
+NEXT_PUBLIC_APPWRITE_DATABASE_ID=
+NEXT_PUBLIC_APPWRITE_COLLECTION_ID=
+NEXT_PUBLIC_APPWRITE_BUCKET_ID=
+```
+🚀 Deployment
+The project is deployed using Vercel.
+To deploy your own version:
+```bash
+npm run build
+```
+👨‍💻 Author
+Fardin Khan
+GitHub: https://github.com/fardinkhan5
+LinkedIn: https://linkedin.com/in/fardin-khan-93a7a7229
